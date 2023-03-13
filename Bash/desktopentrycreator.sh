@@ -2,6 +2,7 @@
 
 
 echo "Desktop entry creator - Requires sudo!"
+# read -p "Location for the desktop entry(/usr/share/applications) is common."
 read -p "Desktop entry name: " desktopentryname
 read -p "Version: " version
 read -p "Application name: " appname
@@ -35,4 +36,5 @@ Exec=$executable
 Icon=$iconpath
 
 # Describes whether this application needs to be run in a terminal or not
-Terminal=$needsterminal" >> $desktopentryname.desktop && mv $desktopentryname.desktop /usr/share/applications
+Terminal=$needsterminal" >> $desktopentryname.desktop && mv $desktopentryname.desktop /usr/share/applications;
+echo "Saved as $desktopentryname.desktop in /usr/share/applications"
